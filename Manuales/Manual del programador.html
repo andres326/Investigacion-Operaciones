@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+        <TITLE>  Manual del programador </TITLE>
+    </head>
+    <body>
+        <div>
+            <center>
+                <FONT FACE="Comic Sans MS" SIZE="6" COLOR="Red">Manual del programador</FONT>
+            </center>
+        </div>
+
+        <div>
+            <br>
+            <FONT FACE="Comic Sans MS" SIZE="5" COLOR="Black"><b>1. Introducción</b></FONT>
+            <br>
+            <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>Aquí se dará a conocer la estructura que tiene la aplicación,
+                explicadose la forma en la que se menaj las variables, las claes y los paquetes; para que de esta forma el 
+                programador pueda acceder a la aplicació correctamente y entienda la forma en que se manejó la estructura de la misma.</p>
+
+            <p>Para inciar se mencionarán los paquetes que componen el programa y esplicar su fin. Luego de ello se explicara 
+                funcionamiento de cada  clase respectiva composición en cuanto a variables y metodos.</p>
+
+            </FONT>
+
+            <FONT FACE="Comic Sans MS" SIZE="5" COLOR="Black"><b>2. Instalación</b></FONT>
+            <br>
+            <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>Para iniciar el programa se debe tener instalado el IDE para Java
+                llamado NetBeans 8.0.2, al iniciarlo se abre el proyecto que se encuentra en la carpeta IOFinal.</p>
+
+            <p>De igual forma se encuentra la librería JFreeChart y la librería JCommon en la carpeta librerías, ellas deben ser 
+                instaladas desde el IDE de la siguiente forma: El el proyecto dar click derecho en la carpta llamada "Libraries" y escoger la opción
+                que dice "add JAR/Folder". Y buscar la carpeta donde se encuentra la libería.</p>
+
+            </FONT>
+
+            <FONT FACE="Comic Sans MS" SIZE="5" COLOR="Black"><b>3. Paquetes</b></FONT>
+
+            <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>Los paquetes que se encuentran en la aplicación se tienen
+                con el fin de poder separar de forma ordenada las clases para que se pueda tener un buen entenimiento de la
+                estructura que tiene la aplicación.</p>
+            Los siguientes son los paquetes que se encuentran en el programa:
+            <br>* Main
+            <br>* PL
+            <br>* Vista</FONT>
+            <br>
+            <blockquote>  <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>3.1 Paquete Main</u></FONT> 
+
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>Este paquete se encarga de contener únicamente la clase
+                    Laucher.</p></FONT></blockquote> 
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>3.2 Paquete PL</u></FONT>
+
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>El nombre del paquete se debe a que contiene todas las
+                    clases que se encargan de la lógica central del programa. Ellas hacen parte de la programación lineal que 
+                    maneja la aplicación.</p></FONT> </blockquote>
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>3.3 Paquete Vista</u></FONT>
+
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>Éste paquete contiene todas las clases que forman la parte
+                    grafica, que es la que permite el contacto con el usuario y el manejo como tal del programa.</p></FONT> </blockquote> 
+
+            <FONT FACE="Comic Sans MS" SIZE="5" COLOR="Black"><b>4. Intefaz gráfica</b></FONT>
+            <br>             
+
+            <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>Los archivos que componen la interfaz gráfica fueron creados
+                con el IDE NetBeans 8.0.2. Estos archivos son esxtensiones .java que se encuentran en el paquete <b>Vista</b>
+            </p></FONT>
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.1 Clase ventanaDatos.java</u></FONT>
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>Ésta ventana es la encargada de pedir los datos al
+                    usuario que se necesitarán para poder inciar el metodo grafico, para que con ellos se pueda iniciar con el desarrollo del programa y así solucionar el problema
+                    que se necesite. Dichos datos se componen de la cantidad de variables y de restricciones que el usuario
+                    necesita la poder seguir adelante con la solución del problema.Para ello se tienen las siguientes variables
+                    graficas:
+                <blockquote>
+                    * private JLabel LblRestriccion: Texto para indicar el dato a ingresar.
+                    <br>* private JLabel LblX1: Texto para indicar primera variable.
+                    <br>* private JLabel LblX2: Texto para indicar segunda variable.
+                    <br>* private JTextField TxtX1: Campo de texto para ingresar primera variable.
+                    <br>* private JTextField TxtX2: Campo de texto para ingresar Segunda variable.
+                    <br>* private JComboBox CmbSigno: ComboBox de los signos a usar.
+                    <br>* private JTextField TxtRespuesta: Campo de texto para ingresar la respuesta de la restricción.
+                    <br>* private JLabel lblFuncionObjetivo: Texto para indicar la función objtivo.
+                    <br>* private JLabel lblZ: Texto para indicar la función Z.
+                    <br>* private JTextField txtX1Z: Campo de texto para ingresar primera variable de la función objetivo.
+                    <br>* private JTextField txtX2Z: Campo de texto para ingresar segunda variable de la función objetivo.
+                    <br>* private JLabel lblX1Z: Texto para indicar primera variable de la función Z.
+                    <br>* private JLabel lblX2Z: Texto para indicar segunda variable de la función Z.
+                    <br>* private JLabel lblPorFavorIngresa: Texto para indicar el ingreso de datos.
+                    <br>* private JButton btnAnalisi: Boton que dirige al análisis de sensiblidad.
+                    <br>* private JButton btnGraficar: Botón que dirige al metodo gráfico.
+                    <br>* private JButton btnCalcular: Botón que Calcula el resultado.
+                    <br>* private JButton btnVolver: Botón que permite volver.
+                    <br>* private JButton btnAgregar: Botón que permite agregar restricciónes.
+                    <br>* private JRadioButton btnMax: Botón que permite elegirsi se maximiza o se minimiza.
+                    <br>* private TextArea txtModelo: Campo de texto que muestra la función objetivo con sus respectivas restricciones.
+                    <br>* private VentanaPrincipal ventana: Referencia a la clase dentana principal.
+                    <br>* private VentanaGrafica ventanaGrafica:: referencia a la ventana que contiene la gráfica.
+                    <br>
+                </blockquote>
+                Luego de ello podemos observar los siguientes métodos que componen ésta clase.
+                <blockquote>
+                    * public VentanaDatos: Se encarga de inicializar la ventana.
+                    <br>* public void inicializar: Se encarga de inicializar los componentes de la ventana.
+                    <br>* public void actionPerformed: Se encarga de manejar los eventos de cada uno de los botones.
+                    <br>* Getters and Setters: Se encargan de manejar la obtención y la asinación de datos de las varialbes, respectivamente.
+                </blockquote>
+                </FONT> </blockquote>
+
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.2 Clase ventanaGrafica.java</u></FONT>
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br>Ésta clase se encarga de mostrar la grafica en donde se
+                ilustrará el método gráfico. Las variables que actúan en la clase son:
+                <blockquote>
+                    * private final VentanaDatos ventana: Referencia a la clase Ventana datos.
+                    <br>* private JFreeChart grafica: Referencia a la clase predeterminada por Java que se encarga de la ilustración de la gráfica.
+                    <br>* private XYSeriesCollection series: ......
+                </blockquote>
+                Entre los métodos se encuentran:
+                <blockquote>
+                    * public VentanaGrafica: Constructor de la clase que la inicializa.
+                    <br>* public VentanaDatos getVentana: Método que permite obtener los datos de ésta clase.
+                </blockquote>
+                </FONT> </blockquote>
+
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.3 Clase ventanaPrincipal.java</u></FONT>
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br> Ésta es la clase que ilustra la ventana principal del programa
+                <blockquote>
+                    *  private JPanel contentPane: panel que contiene los elementos de la ventana.
+                    <br>*  private JButton btnIniciar: botón que permite iniciar el programa.
+                    <br>*  private JLabel lblBienvenido: Campo que muestra un mensaje de bienvenida.
+                    <br>*  private JButton btnInstrucciones: Boton que envía a observar las instrucciones del programa.
+                    <br>*  private JButton btnSimplex: Botón que dirige al método simplex.
+                </blockquote>
+                Entre los métodos se encuentran:
+                <blockquote>
+                    * public ventanaPrincipal: Se encarga de inicializar los componentes de la ventana.
+                    <br>* public void actionPerformed: Se encarga de manejar los eventos de cada uno de los botones. 
+                </blockquote>
+                </FONT> </blockquote>
+
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.4 Clase ventanaSimplex.java</u></FONT>
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br>Obtiene los datos para el metodo de realización del simplex.
+                Entre las variables se encuentran:
+                <blockquote>
+                    * Variables que hacen parte de la creación de los componentes de la ventana.
+                </blockquote>
+                Entre los métodos se encuentran:
+                <blockquote>
+                    * public VentanaSimplex: Constructor que inicializa los componentes de la ventana.
+                    <br>* public void actionPerformed: Metodo que controla los eventos de los botones.
+                    <br>* public void matrizHolgura: se encargarga de llenar la matriz de holgura.
+                    <br>* public void matrizRestricciones: llena la matriz de restricciones.
+                    <br>* public void filaZ: Se encarga de la fila de la función Z
+                    <br>* Getters and Setters de la ventana.
+                </blockquote>
+                </FONT> </blockquote>
+
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>3.5 Clase ventanaSimplexDosFaces.java</u></FONT>
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br> Se encarga de manejar la ventana del metodo de las dos faces.
+                Entre las variables se encuentran:
+                <blockquote>
+                    *  Variables que hacen parte de la creación de los componentes de la ventana.
+                </blockquote>
+                Entre los métodos se encuentran:
+                <blockquote>
+                    *  public VentanaSimplexDosFases: Contructor que inicializa la clase.
+                    <br>* public void llenadoVariables: llena las etiquetas de las variables del problema.
+                    <br>* public void cambioVariables: metodo que cambia la tabla antigua a la nueva.
+                    <br>* public void llenado: llena la tabla con los datos.
+                    <br>* public void actionPerformed: controla los eventos de los botones.
+
+                </blockquote>
+                </FONT> </blockquote>
+
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>3.6 Clase ventanaTablaSimplex.java</u></FONT>
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br> Se encarga de manejar la ventana que muestra las tablas
+                del método simplex.
+                Entre las variables se encuentran:
+                <blockquote>
+                    *  Variables que hacen parte de la creación de los componentes de la ventana.
+                </blockquote>
+                Entre los métodos se encuentran:
+                <blockquote>
+                    *   public VentanaTablaSimplex: Contructor que inicializa la clase.
+                    <br>* public void llenadoVariables: llena las etiquetas de las variables del problema.
+                    <br>* public void cambioVariables: metodo que cambia la tabla antigua a la nueva.
+                    <br>* public void llenado: llena la tabla con los datos.
+                    <br>* public void actionPerformed: controla los eventos de los botones.
+
+                </blockquote>
+                </FONT> </blockquote>
+
+            <FONT FACE="Comic Sans MS" SIZE="5" COLOR="Black"><b>4. Lógica de la aplicación</b></FONT>
+            <br>             
+
+            <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><p>Los archivos que componen la lógíca del programa se 
+                encuentran en el paquete <b>PL</b> y al igual que los archivos de la interfaz, son de extención .java
+                y se crearon a travez de NetBeans 8.0.2. Entre las clases que forman este paquete se encuentran.
+            </p></FONT>
+
+            <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.1 Clase MetodoGrafico.java</u></FONT>
+                <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br>SE encarga de la solución de un problema mediante el método gráfico.
+                Entre las variables se encuentran:
+                <blockquote>
+                    * private ArrayList<Puntos> puntos: Arreglo que guarda los puntos de intersección.
+                        <br>* private  <br>* Puntos puntosI: Variable que contiene a los puntos.
+                        <br>* private JFreeChart grafica: Referencia a la clase que hace la gráfica.
+                        <br>* private XYSeriesCollection series: tipo de variable que grafica X y Y.
+                        <br>* private XYSeries datos: Guarda la anterior variable.
+                        <br>* private double puntoX1: punto de intersección X1.
+                        <br>* private double puntoX2 punto de intersección X2.
+                        <br>* private Modelo modelo: Referencia a la calse modelo.
+                        </blockquote>
+                        Entre los métodos se encuentran:
+                        <blockquote>
+                            *  JFreeChart grafica: Se encarga del manejo de la gráfica.
+                            <br>* public void agregarPuntos: Agrega los puntos de intersección.
+                            <br>* public double zOptimo: Muestra el Z óptimo.
+                            <br>* private double calculoZ: Calcula el Z óptimo.
+                            <br>* Getters and Setters de la ventana.
+
+                        </blockquote>
+                    </FONT> </blockquote>
+
+                <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.2 Clase Modelo.java</u></FONT>
+                    <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br> Se encarga de comuicar la vsta y la lógica. Entre las 
+                    varibales se encuentran:
+                    <blockquote>
+                        *  private MetodoGrafico metodo: referencia a la clase MetodoGrafico.
+                        <br>* public SimplexNormal simplexN: referencia a la clase SimplexNormal.
+                        <br>* public SimplexDosFases simplexM: referencia a la clase SimplexDosFases.
+                        <br>* private VentanaPrincipal ventana: referencia a la clase Ventana Principal.
+
+                    </blockquote>
+                    Entre los métodos se encuentran:
+                    <blockquote>
+                        * public Modelo:Constructor de la clase.
+                        <br>* public boolean simplexNormal: ejecuta la clase SimplexNormal.
+                        <br>* public boolean simplexDosFases: ejecuta la clase SimplexDosFases.
+                        <br>* Getters and Setters de cada una de las referencias.
+                    </blockquote>
+                    </FONT> </blockquote>
+
+                <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.3 Clase Puntos.java</u></FONT>
+                    <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br>Se encarga de modelar los puntos de intersección.
+                    Las varialbes que se encuentran son:
+                    <blockquote>
+                        *  private double puntoX: controla el punto en X.
+                        <br>* private double puntoY: controla el punto en Y.
+                    </blockquote>
+                    Entre los métodos se encuentran:
+                    <blockquote>
+                        * Getters and Setters de las varialbes.
+                    </blockquote>
+                    </FONT> </blockquote>
+
+                <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.4 Clase SimplexModulo.java</u></FONT>
+                    <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br> se encarga de ser una interfaz para los mtodos de
+                    maximizar y minimizar. Contiene los siguientes métodos Abstractos.
+                    <blockquote>
+                        *  public boolean simplexMaximizar();
+                        <br>* public boolean simplexMinimizar();
+                        </FONT> </blockquote>
+                </blockquote>
+
+                <blockquote><FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.5 Clase SimplexDosFases.java</u></FONT>
+                    <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br> Seencarga de solucionar un problema por medio
+                    del método de las dos fases. Implementa la interfaz SimplexModulo.
+                    </FONT>
+                </blockquote>
+
+                <blockquote> <FONT FACE="Comic Sans MS" SIZE="4" COLOR="Black"><u>4.6 Clase SimplexNormal.java</u></FONT>
+                    <FONT FACE="Comic Sans MS" SIZE="3" COLOR="Black"><br><br> Se encarga de solucionar un problema por medio
+                    del simplex básico.  Implementa la interfaz SimplexModulo.
+                    </FONT> </blockquote>
+        </div>
+    </body>
+</html>
